@@ -1,0 +1,27 @@
+{
+  "name": "maidentiedot-backend",
+  "version": "1.0.0",
+  "description": "Backend service for maidentiedot",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahojukka5/maidentiedot-backend.git"
+  },
+  "author": "Jukka Aho <ahojukka5@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahojukka5/maidentiedot-backend/issues"
+  },
+  "homepage": "https://github.com/ahojukka5/maidentiedot-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
