@@ -1,10 +1,11 @@
 import axios from 'axios';
 import express from 'express';
+import config from '../config.js';
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  const accessKey = '66fc4921f8cfa66fdbdbb69478498de0';
+  const accessKey = config.WEATHER_API_ACCESS_KEY;
   const city = 'Helsinki';
   const uri = `http://api.weatherstack.com/current?access_key=${accessKey}&query=${city}`;
 
