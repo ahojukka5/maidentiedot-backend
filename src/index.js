@@ -11,5 +11,6 @@ const PORT = process.env.PORT || 3003;
 app.use('/api/weather', weatherRouter);
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  const mode = process.env.NODE_ENV;
+  console.log(`Server running on port ${PORT}, mode = ${mode}`);
 });
