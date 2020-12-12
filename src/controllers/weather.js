@@ -1,30 +1,22 @@
-import http from 'http';
+import axios from 'axios';
 import express from 'express';
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  const options = {
-    host: 'api.weatherstack.com',
-    path: '/current?access_key=66fc4921f8cfa66fdbdbb69478498de0&query=Helsinki',
-  };
+  const accessKey = '66fc4921f8cfa66fdbdbb69478498de0';
+  const city = 'Helsinki';
+  const uri = `http://api.weatherstack.com/current?access_key=${accessKey}&query=${city}`;
 
-  const callback = (response) => {
-    var str = '';
-
-    //another chunk of data has been received, so append it to `str`
-    response.on('data', function (chunk) {
-      str += chunk;
+  axios
+    .get(uri)
+    .then((response) => {
+      console.log(response.data);
+      res.json(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
     });
-
-    //the whole response has been received, so we just print it out here
-    response.on('end', function () {
-      console.log(str);
-      res.send(str);
-    });
-  };
-
-  http.request(options, callback).end();
 });
 
 export default router;
