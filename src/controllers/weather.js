@@ -1,7 +1,7 @@
-const http = require('http');
-import { Router } from 'express';
+import http from 'http';
+import express from 'express';
 
-const router = Router();
+const router = express.Router();
 
 router.get('/', (req, res) => {
   const options = {
