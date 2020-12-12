@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import weatherRouter from './controllers/weather';
+import weatherRouter from './controllers/weather.js';
 
 const app = express();
 app.use(express.json());
