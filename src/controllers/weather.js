@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
   axios
     .get(uri)
     .then((response) => {
-      console.log(response.data);
       res.json(response.data);
     })
     .catch((error) => {
