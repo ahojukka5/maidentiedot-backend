@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   const accessKey = config.WEATHER_API_ACCESS_KEY;
-  const city = 'Helsinki';
+  const city = req.query.city;
   const uri = `http://api.weatherstack.com/current?access_key=${accessKey}&query=${city}`;
 
   axios
