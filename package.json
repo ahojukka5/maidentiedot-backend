@@ -22,11 +22,11 @@
   "dependencies": {
     "axios": "^0.21.0",
     "cors": "^2.8.5",
-    "crossenv": "0.0.2-security",
     "express": "^4.17.1",
     "node": "^15.4.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.6"
   },
